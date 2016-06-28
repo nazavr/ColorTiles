@@ -18,15 +18,11 @@ function ColorTilesGame(props) {
 
         if (checkIsTheSame(tile)) {
             setTimeout(function () {
-                //lastSelectedElement.style.opacity = "0";
-                //tile.style.opacity = "0";
                 document.querySelector("h2").innerHTML = "You win!!! Elements have the same color! Try again!";
             }, 1500);
             setTimeout(tryAgain, 4000);
         } else {
             setTimeout(function () {
-                //lastSelectedElement.style.opacity = "0";
-                //tile.style.opacity = "0";
                 document.querySelector("h2").innerHTML = "Sorry! Different colors of tiles! Try again!";
             }, 1500);
             setTimeout(tryAgain, 4000);
