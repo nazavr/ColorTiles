@@ -44,7 +44,7 @@ function ColorTilesGame(props) {
     function tryAgain() {
         for (var i = 0; i < tiles.length; i++) {
             tiles[i].style.backgroundColor = '';
-            document.querySelector("h2").innerHTML = "Please select two random tiles";
+            document.querySelector("h2").innerHTML = "Please select two another random tiles";
         }
 
         lastSelectedElement = null;
