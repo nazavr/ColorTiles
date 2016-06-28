@@ -1,0 +1,29 @@
+h1, h2 {
+    text-align: center;
+}
+h1 {
+    color: white;
+    background-color: #48D1CC;
+}
+.container {
+  margin: 0 auto;
+  list-style: none;
+  width: 425px;
+  padding: 0;
+}
+
+.container li {
+  list-style: none;
+  display: inline-block;
+}
+
+.container li div {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #900;
+}
+
+.container li div:hover{
+    cursor: pointer;
+}
+

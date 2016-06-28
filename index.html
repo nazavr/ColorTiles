@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Game | Color Tiles</title>
+        <link href="index.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <h1>COLOR TILES</h1>
+        <h2>Please select two random tiles</h2><br>
+            <ul id="square" class="container">
+                <li><div data-color-name="red"></div></li>
+                <li><div data-color-name="red"></div></li>
+                <li><div data-color-name="green"></div></li>
+                <li><div data-color-name="green"></div></li>
+                <li><div data-color-name="yellow"></div></li>
+                <li><div data-color-name="yellow"></div></li>
+                <li><div data-color-name="black"></div></li>
+                <li><div data-color-name="black"></div></li>
+                <li><div data-color-name="grey"></div></li>
+                <li><div data-color-name="grey"></div></li>
+                <li><div data-color-name="orange"></div></li>
+                <li><div data-color-name="orange"></div></li>
+                <li><div data-color-name="blue"></div></li>
+                <li><div data-color-name="blue"></div></li>
+                <li><div data-color-name="brown"></div></li>
+                <li><div data-color-name="brown"></div></li>
+            </ul>
+        <script type="text/javascript" src="index.js"></script>
+        <script>
+            new ColorTilesGame({
+                componentSelector: '#square'
+            });
+        </script>
+    </body>
+</html>
