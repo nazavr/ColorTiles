@@ -27,7 +27,7 @@ function ColorTilesGame(props) {
             setTimeout(function () {
                 //lastSelectedElement.style.opacity = "0";
                 //tile.style.opacity = "0";
-                document.querySelector("h2").innerHTML = "Sorry! Different tiles! Try again!";
+                document.querySelector("h2").innerHTML = "Sorry! Different colors of tiles! Try again!";
             }, 1500);
             setTimeout(tryAgain, 4000);
         }
