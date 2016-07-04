@@ -8,8 +8,6 @@ function ColorTilesGame(props) {
         for (var i = 0; i < tiles.length; i++) {
             tiles[i].style.backgroundColor = '';
             document.querySelector("h2").innerHTML = "Please select two random tiles";
-            tiles = document.querySelectorAll(props.componentSelector + ' li>div'),
-            tilesLi = document.querySelectorAll(props.componentSelector + ' li'),
             countLoop = 0;
         }    
     }, false);
