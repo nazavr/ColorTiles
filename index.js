@@ -4,6 +4,12 @@ function ColorTilesGame(props) {
         tilesLi = document.querySelectorAll(props.componentSelector + ' li'),
         masTiles = [],
         countLoop = 0;
+        document.getElementById('btn').addEventListener('click', function() {
+            for (var i = 0; i < tiles.length; i++) {
+                tiles[i].style.backgroundColor = '';
+                document.querySelector("h2").innerHTML = "Please select two random tiles";
+            }    
+        }, false);
         document.getElementById('square').addEventListener('click', function(e) {
                 if (e.target.nodeName === 'DIV') {
                     tileClick(e.target);
