@@ -29,9 +29,11 @@ h1 {
 
 #btn {
     text-align: center;
+    color: white;
+    background-color: #48D1CC;
+    width: 425px;
 }
 
 #btn:hover {
     cursor: pointer;
-    color: red;
 }
