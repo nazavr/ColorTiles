@@ -4,12 +4,6 @@ function ColorTilesGame(props) {
         tilesLi = document.querySelectorAll(props.componentSelector + ' li'),
         masTiles = [],
         countLoop = 0;
-        document.getElementById('btn').addEventListener('click', function() {
-            for (var i = 0; i < tiles.length; i++) {
-                tiles[i].style.backgroundColor = '';
-                document.querySelector("h2").innerHTML = "Please select two random tiles";
-            }    
-        }, false);
         document.getElementById('square').addEventListener('click', function(e) {
                 if (e.target.nodeName === 'DIV') {
                     tileClick(e.target);
@@ -42,6 +36,7 @@ function ColorTilesGame(props) {
                     document.querySelector("h2").innerHTML = "VICTORY!!! You have passed the whole game";
                 }, 2500);
             }
+            
             // Кінець коду підрахунку збігів кольорів плиток
         } else {
             setTimeout(function () {
@@ -96,4 +91,12 @@ function ColorTilesGame(props) {
         lastSelectedElement = null;
     }
     // Кінець функції при кліку
+    document.getElementById('btn').addEventListener('click', function() {
+        for (var i = 0; i < tiles.length; i++) {
+            tiles[i].style.backgroundColor = '';
+            document.querySelector("h2").innerHTML = "Please select two random tiles";
+            countLoop = 0;
+            return countLoop;
+        }    
+    }, false);
 }
