@@ -28,11 +28,13 @@ h1 {
 }
 
 #btn {
+    text-align: center;
     margin: 0 auto;
     padding-top: 20px;
     color: white;
     background-color: #48D1CC;
-    width: 425px;
+    width: 420px;
+    font-size: 25px;
 }
 
 #btn:hover {
