@@ -4,13 +4,9 @@ function ColorTilesGame(props) {
         tilesLi = document.querySelectorAll(props.componentSelector + ' li');
         masTiles = [];
         document.getElementById('square').addEventListener('click', function(e) {
-            for (var i = 0; i < tiles.length; i++) {
                 if (e.target.nodeName === 'DIV') {
                     tileClick(e.target);
                 }
-            }
-            alert(i);
-            //document.querySelector("h2").innerHTML = "VICTORY";
         }, false);
 
     // Початок функції при кліку
