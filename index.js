@@ -1,8 +1,9 @@
 function ColorTilesGame(props) {
     var lastSelectedElement, 
         tiles = document.querySelectorAll(props.componentSelector + ' li>div'),
-        tilesLi = document.querySelectorAll(props.componentSelector + ' li');
-        masTiles = [];
+        tilesLi = document.querySelectorAll(props.componentSelector + ' li'),
+        masTiles = [],
+        countLoop = 0;
         document.getElementById('square').addEventListener('click', function(e) {
                 if (e.target.nodeName === 'DIV') {
                     tileClick(e.target);
@@ -27,12 +28,23 @@ function ColorTilesGame(props) {
                 document.querySelector("h2").innerHTML = "Please select next two random tiles";
             }, 2500);
             lastSelectedElement = null;
+            
+            // Початок коду підрахунку збігів кольорів плиток
+            countLoop = countLoop + 1;
+            if (countLoop == tiles.length / 2){
+                setTimeout(function () {
+                    document.querySelector("h2").innerHTML = "VICTORY!!! You have passed the whole game";
+                }, 2500);
+                ColorTilesGame();
+            }
+            // Кінець коду підрахунку збігів кольорів плиток
         } else {
             setTimeout(function () {
                 document.querySelector("h2").innerHTML = "Sorry! Different colors of tiles! Try again!";
             }, 1500);
             setTimeout(tryAgain, 2500);
         }
+        
     }
 
     function checkIsTheSame(tile) {
