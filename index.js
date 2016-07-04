@@ -4,19 +4,19 @@ function ColorTilesGame(props) {
         tilesLi = document.querySelectorAll(props.componentSelector + ' li'),
         masTiles = [],
         countLoop = 0;
-        document.getElementById('btn').addEventListener('click', function() {
+    document.getElementById('btn').addEventListener('click', function() {
         for (var i = 0; i < tiles.length; i++) {
             tiles[i].style.backgroundColor = '';
             document.querySelector("h2").innerHTML = "Please select two random tiles";
             countLoop = 0;
-            return countLoop;
+            //return countLoop;
         }    
     }, false);
-        document.getElementById('square').addEventListener('click', function(e) {
-                if (e.target.nodeName === 'DIV') {
-                    tileClick(e.target);
-                }
-        }, false);
+    document.getElementById('square').addEventListener('click', function(e) {
+        if (e.target.nodeName === 'DIV') {
+            tileClick(e.target);
+        }
+    }, false);
 
     // Початок функції при кліку
     function tileClick(tile) {
