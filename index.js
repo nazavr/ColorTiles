@@ -41,7 +41,6 @@ function ColorTilesGame(props) {
                 setTimeout(function () {
                     document.querySelector("h2").innerHTML = "VICTORY!!! You have passed the whole game";
                 }, 2500);
-                ColorTilesGame();
             }
             // Кінець коду підрахунку збігів кольорів плиток
         } else {
