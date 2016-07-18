@@ -7,6 +7,8 @@ function ColorTilesGame(props) {
     document.getElementById('btn').addEventListener('click', function() {
         for (var i = 0; i < tiles.length; i++) {
             tiles[i].style.backgroundColor = '';
+            tiles[i].style.opacity = '1';
+            tiles[i].style.cursor = "pointer";
             document.querySelector("h2").innerHTML = "Please select two random tiles";
             countLoop = 0;
         }    
@@ -19,7 +21,7 @@ function ColorTilesGame(props) {
 
     // Початок функції при кліку
     function tileClick(tile) {
-
+        
         hightlightTile(tile);
 
         if (!lastSelectedElement) {
@@ -32,9 +34,16 @@ function ColorTilesGame(props) {
                 document.querySelector("h2").innerHTML = "You win!!! Elements have the same color!";
             }, 1500);
             setTimeout(function () {
+                tile.style.opacity = "0";
+                tile.style.cursor = "default";
+                lastSelectedElement.style.opacity = "0";
+                lastSelectedElement.style.cursor = "default";
+            }, 2000);
+            setTimeout(function () {
                 document.querySelector("h2").innerHTML = "Please select next two random tiles";
+                lastSelectedElement = null;
             }, 2500);
-            lastSelectedElement = null;
+            
             
             // Початок коду підрахунку збігів кольорів плиток
             countLoop = countLoop + 1;
